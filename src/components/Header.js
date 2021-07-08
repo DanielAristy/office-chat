@@ -1,25 +1,26 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-export default function Navbar() {
+export default function Header() {
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div className="container-fluid">
-                <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li className="nav-item">
-                        <Link className="nav-link active" exact="true" to="/">Home</Link>
-                    </li>
-                    <li>
-                        <Link className="nav-link active" exact="true" to="/register">Register</Link>
-                    </li>
-                    <li>
-                        <Link className="nav-link active" exact="true" to="/login">Login</Link>
-                    </li>
-                    <li>
-                        <Link className="nav-link active" exact="true" to="/contact">Contact</Link>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+        <header>
+            <nav className="navbar navbar-expand-sm fixed-top navbar-dark bg-dark">
+                <Link className="navbar-brand" to="/">OfficeChat</Link>
+                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
+                </button>
+                <div className="collapse navbar-collapse justify-content-start" id="navbarNavAltMarkup">
+                    <div className="navbar-nav">
+                        <Link className="nav-item nav-link mr-3" exact to="/contact">Contact</Link>
+                    </div>
+                </div>
+                <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                    <div className="navbar-nav">
+                        <Link className="nav-item nav-link mr-3" to="/login">Sign In</Link>
+                        <Link className="nav-item nav-link mr-3" to="/signup">Sign Up</Link>
+                    </div>
+                </div>
+            </nav>
+        </header>
     )
 }
