@@ -7,16 +7,16 @@ export default function Navbar() {
             <div className="container-fluid">
                 <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                     <li className="nav-item">
-                        <Link className="nav-link active" exact to="/">Home</Link>
+                        <Link className="nav-link active" exact="true" to="/">Home</Link>
                     </li>
                     <li>
-                        <Link className="nav-link active" exact to="/register">Register</Link>
+                        <Link className="nav-link active" exact="true" to="/register">Register</Link>
                     </li>
                     <li>
-                        <Link className="nav-link active" exact to="/login">Login</Link>
+                        <Link className="nav-link active" exact="true" to="/login">Login</Link>
                     </li>
                     <li>
-                        <Link className="nav-link active" exact to="/contact">Contact</Link>
+                        <Link className="nav-link active" exact="true" to="/contact">Contact</Link>
                     </li>
                 </ul>
             </div>
