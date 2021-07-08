@@ -3,14 +3,14 @@ import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-d
 import Contact from '../components/Contact'
 import Home from '../components/Home'
 import Login from '../components/Login'
-import Navbar from '../components/Navbar'
+import Header from '../components/Header'
 import NotFound from '../components/NotFound'
 import Register from '../components/Register'
 
 export default function AppRouter() {
     return (
         <Router>
-            <Navbar />
+            <Header />
             <Switch>
                 <Route path="/contact" component={Contact} />
                 <Route path="/login" component={Login} />
