@@ -81,7 +81,7 @@ export default class extends Component {
                             {chat.content}
                             <br />
                             <span className="chat-time float-right">{this.formatTime(chat.timestamp)}</span>
-                            {/* <input type="checkbox" /> */}
+                            <span className="chat-time float-left">{this.state.user.email}</span>
                         </p>
                     })}
                 </div>
