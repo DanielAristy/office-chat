@@ -69,7 +69,7 @@ export default class extends Component {
     render() {
         return (
             <div className="py-5 text-center container">
-                <h4>Chat SofkaU</h4>
+                <h4>Chat oficina Marinilla</h4>
                 <div className="chat-area" ref={this.myRef}>
                     {/* Indicardor de carga */}
                     {this.state.loadingChats ? <div className="spinner-border text-success" role="status">
