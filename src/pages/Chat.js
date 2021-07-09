@@ -57,7 +57,8 @@ export default class extends Component {
             await db.ref("chats").push({
                 content: this.state.content,
                 timestamp: Date.now(),
-                uid: this.state.user.uid
+                uid: this.state.user.uid,
+                photo: this.state.user.photoURL
             });
             this.setState({ content: '' });
             chatArea.scrollBy(0, chatArea.scrollHeight);
@@ -65,6 +66,7 @@ export default class extends Component {
             this.setState({ writeError: error.message });
         }
     }
+
 
     render() {
         return (
@@ -78,17 +80,17 @@ export default class extends Component {
                     {/* Area del chat */}
                     {this.state.chats.map(chat => {
                         return <p key={chat.timestamp} className={"chat-bubble " + (this.state.user.uid === chat.uid ? "current-user" : "")}>
+                            <img src={chat.photo} className="photo" />
                             {chat.content}
                             <br />
                             <span className="chat-time float-right">{this.formatTime(chat.timestamp)}</span>
-                            <span className="chat-time float-left">{this.state.user.email}</span>
                         </p>
                     })}
                 </div>
                 <form onSubmit={this.handleSubmit} className="mx-3">
                     <textarea className="form-control" placeholder="Ingresa tu mensaje" name="content" onChange={this.handleChange} value={this.state.content} />
                     {this.state.error ? <p className="text-danger">{this.state.error}</p> : null}
-                    <button type="submit" className="btn btn-submit px-5 mt-4">Send</button>
+                    <button type="submit" className="btn btn-submit px-5 mt-4">Enviar</button>
                 </form>
                 <div className="py-5 mx-3">
                     Login in as: <strong className="text-info">{this.state.user.email}</strong>

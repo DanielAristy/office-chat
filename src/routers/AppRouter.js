@@ -10,6 +10,7 @@ import Header from '../components/Header'
 import NotFound from '../pages/NotFound'
 import SignUp from '../pages/Signup'
 import Chat from '../pages/Chat'
+import Register from '../pages/Register'
 
 export default class AppRouter extends Component {
   constructor() {
@@ -60,6 +61,11 @@ export default class AppRouter extends Component {
             component={Chat}
             authenticated={this.state.authenticated}
           />
+          <PrivateRoute
+            path="/register"
+            component={Register}
+            authenticated={this.state.authenticated}
+          />
           <Route exact path="/" component={Home} />
           <Route path="/404" component={NotFound} />
           <Route path="*">
@@ -68,7 +74,6 @@ export default class AppRouter extends Component {
         </Switch>
       </Router>
     )
-
     )
   }
 }

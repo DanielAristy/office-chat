@@ -196,6 +196,15 @@ h4 {
 
 /*Chat*/
 
+.photo {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin-right: 7px;
+  background-color: rgb(121, 121, 121);
+  float: left;
+}
+
 .target {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

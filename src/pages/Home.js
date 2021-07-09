@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
 import CompanyList from '../components/CompanyList';
-import '../index.css'
-import { PrivateRoute } from '../routers/PrivateRoute'
+import '../index.css';
+import { auth } from '../service/firebase'
 const KEY = "officeChat.companies"
+
 
 export default function Home() {
 
@@ -63,6 +64,10 @@ export default function Home() {
                         </p>
                         <Link className="btn btn-primary px-5 mr-3" to="/signup">Crear Nueva Cuenta</Link>
                         <Link className="btn btn-secondary px-5 mr-2" to="/login">Ingresar con una cuenta</Link>
+                        {auth().currentUser ?
+                            (<Link className="btn btn-submit px-5 mt-4" to="/register">Crear nuevo aliado</Link>)
+                            : null
+                        }
                     </div>
                 </div>
             </section>

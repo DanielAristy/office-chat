@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom'
-
 export default function Contact() {
     return (
         <section className="py-5 text-center container">
