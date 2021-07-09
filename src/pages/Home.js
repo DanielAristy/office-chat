@@ -1,7 +1,18 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import '../index.css'
 
 export default function Home() {
+
+    const sizeCard = {
+        width: '18rem',
+    }
+
+    const cards = {
+        display: 'flex',
+        justifyContent: 'space-evenly'
+    }
+
     return (
         <>
             <section className="py-5 text-center container">
@@ -18,61 +29,35 @@ export default function Home() {
                 </div>
             </section>
             <div className="album py-5 bg-light">
-                <div className="container">
-                    <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                        <div class="col">
-                            <div class="card shadow-sm">
-                                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
-                                    role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                                    <title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
-                                <div class="card-body">
-                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                        </div>
-                                        <small class="text-muted">9 mins</small>
-                                    </div>
-                                </div>
-                            </div>
+                <div className="container target">
+                    <div className="card sizeTarget">
+                        <img src="https://www.terminalesmedellin.com/wp-content/uploads/2016/12/logo-rapido-ochoa.jpg" class="card-img-top" alt="logo rapido ochoa" />
+                        <div className="card-body">
+                            <h5 className="card-title">Rapido Ochoa</h5>
+                            <p className="card-text">
+                                Somos una empresa dedicada al transporte terrestre de pasajeros y carga, nuestra
+                                operación inició el 25 de Junio de 1958 en la ciudad de Medellín...</p>
+                            <a href="https://rapidoochoa.com" target="_blank" className="btn btn-primary">Ir a ver</a>
                         </div>
-                        <div class="col">
-                            <div class="card shadow-sm">
-                                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
-                                    role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                                    <title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
-                                <div class="card-body">
-                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                        </div>
-                                        <small class="text-muted">9 mins</small>
-                                    </div>
-                                </div>
-                            </div>
+                    </div>
+                    <div className="card sizeTarget">
+                        <img src="https://www.terminalesmedellin.com/wp-content/uploads/2016/12/logo-coomotor.jpg" class="card-img-top" alt="logo rapido ochoa" />
+                        <div className="card-body">
+                            <h5 className="card-title">Coomotor</h5>
+                            <p className="card-text">
+                                Es una empresa de transporte terrestre nacional de pasajeros y encomiendas,
+                                que crece continuamente para contribuir al desarrollo sostenible del país...</p>
+                            <a href="https://coomotor.com.co" target="_blank" className="btn btn-primary">Ir a ver</a>
                         </div>
-                        <div class="col">
-                            <div class="card shadow-sm">
-                                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
-                                    role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                                    <title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
-                                <div class="card-body">
-                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                        </div>
-                                        <small class="text-muted">9 mins</small>
-                                    </div>
-                                </div>
-                            </div>
+                    </div>
+                    <div className="card sizeTarget">
+                        <img src="https://omega.com.co/wp-content/uploads/2018/02/omega-transportadora-logo.png" class="card-img-top" alt="logo rapido ochoa" />
+                        <div className="card-body">
+                            <h5 className="card-title">Omega</h5>
+                            <p className="card-text">
+                                En el año de 1948 se reunieron varios transportadores en el municipio de Togüí (Boyacá).
+                                Entre ellos Isaías Sánchez, Donato Sánchez, Jeremías Ruiz y Segundo Ruiz...</p>
+                            <a href="https://omega.com.co" target="_blank" className="btn btn-primary">Ir a ver</a>
                         </div>
                     </div>
                 </div>
