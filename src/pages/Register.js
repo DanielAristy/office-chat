@@ -53,7 +53,7 @@ export default class Register extends Component {
     render() {
         return (
             <div className="py-5 container">
-                <h1>Register</h1>
+                <h1>Crear una nueva Empresa</h1>
                 <form onSubmit={this.handleSubmit}>
                     <div className="mb-3">
                         <label className="form-label">URL logo</label>

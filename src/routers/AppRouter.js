@@ -65,7 +65,7 @@ export default class AppRouter extends Component {
             authenticated={this.state.authenticated}
           />
           <PrivateRoute
-            path="/register"
+            path="/company"
             component={Register}
             authenticated={this.state.authenticated}
           />

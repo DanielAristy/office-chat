@@ -46,11 +46,11 @@ export default class Home extends Component {
                             </p>
 
                             {auth().currentUser ?
-                                <Link className="btn btn-submit px-5 mt-4" to="/register">Crear una nueva empresa</Link>
+                                <Link className="btn btn-submit px-5 mt-4" to="/company">Crear una nueva empresa</Link>
                                 :
                                 <>
                                     <Link className="btn btn-primary px-5 mr-3" to="/signup">Crear Nueva Cuenta</Link>
-                                    <Link className="btn btn-secondary px-5 mr-2" to="/login">Ingresar con una cuenta</Link>    
+                                    <Link className="btn btn-secondary px-5 mr-2" to="/login">Ingresar con una cuenta</Link>
                                 </>
                             }
 

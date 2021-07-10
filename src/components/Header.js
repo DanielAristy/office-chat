@@ -15,7 +15,7 @@ export default function Header() {
                     <div className="navbar-nav">
 
                         {auth().currentUser ?
-                            <Link className="nav-item nav-link mr-3" exact="true" to="/register">Register</Link>
+                            <Link className="nav-item nav-link mr-3" exact="true" to="/company">NewCompany</Link>
                             : <Link className="nav-item nav-link mr-3" exact="true" to="/contact">Contact</Link>
                         }
 
