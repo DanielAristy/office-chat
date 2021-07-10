@@ -3,6 +3,7 @@ import firebase from 'firebase';
 const config = {
     apiKey: "AIzaSyCDwA1KWdDQZm8P0hm5rY2kFIMSGgB82yM",
     authDomain: "fir-officechat.firebaseapp.com",
+    databaseURL: "https://fir-officechat-default-rtdb.firebaseio.com",
     projectId: "fir-officechat",
     storageBucket: "fir-officechat.appspot.com",
     messagingSenderId: "781387439242",
@@ -13,5 +14,4 @@ const config = {
 firebase.initializeApp(config);
 
 export const auth = firebase.auth;
-export const fs = firebase.firestore();
 export const db = firebase.database();

@@ -45,7 +45,10 @@ export default class AppRouter extends Component {
       <Router>
         <Header />
         <Switch>
-          <Route path="/contact" component={Contact} />
+          <PublicRoute path="/contact" 
+          component={Contact}
+          authenticated={this.state.authenticated}
+          />
           <PublicRoute
             path="/login"
             component={Login}

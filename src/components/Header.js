@@ -13,10 +13,10 @@ export default function Header() {
                 </button>
                 <div className="collapse navbar-collapse justify-content-start" id="navbarNavAltMarkup">
                     <div className="navbar-nav">
-                        <Link className="nav-item nav-link mr-3" exact="true" to="/contact">Contact</Link>
+
                         {auth().currentUser ?
-                            (<Link className="nav-item nav-link mr-3" exact="true" to="/register">Register</Link>)
-                            : null
+                            <Link className="nav-item nav-link mr-3" exact="true" to="/register">Register</Link>
+                            : <Link className="nav-item nav-link mr-3" exact="true" to="/contact">Contact</Link>
                         }
 
                     </div>
