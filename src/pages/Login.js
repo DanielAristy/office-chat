@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
+import { CONSTANTS } from '../components/Constants';
 import { signin } from '../helpers/auth';
 
 export default class Login extends Component {
@@ -41,7 +42,7 @@ export default class Login extends Component {
                     <h1>
                         Login to
                         <Link className="title ml-2" to="/">{/*Separacion al lado izquierdo*/}
-                            Chatty
+                            {CONSTANTS.OFFICE_CHAT}
                         </Link>
                     </h1>
                     <p className="lead">{/* Creando un estilo mas tenue en la letra */}
@@ -74,11 +75,11 @@ export default class Login extends Component {
                             <p>{this.state.error}</p>
                         ) : null}
                         {/*Boton redondeano de color azul */}
-                        <button className="btn btn-primary px-5" type="submit">Login</button>
+                        <button className="btn btn-primary px-5" type="submit">{CONSTANTS.LOGIN}</button>
                     </div>
                     <hr />
                     <p>
-                        Don't have an account? <Link to="/signup">Sign up</Link>
+                        Don't have an account? <Link to="/signup">{CONSTANTS.SIGN_UP}</Link>
                     </p>
                 </form>
             </div>

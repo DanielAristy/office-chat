@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { auth } from '../service/firebase'
 import { db } from '../service/firebase'
 import { v4 as uuidv4 } from 'uuid';
+import { CONSTANTS } from '../components/Constants';
 
 export default class Register extends Component {
     constructor(props) {
@@ -53,10 +54,10 @@ export default class Register extends Component {
     render() {
         return (
             <div className="py-5 container">
-                <h1>Crear una nueva Empresa</h1>
+                <h1>{CONSTANTS.CREATE_A_NEW_COMPANY}</h1>
                 <form onSubmit={this.handleSubmit}>
                     <div className="mb-3">
-                        <label className="form-label">URL logo</label>
+                        <label className="form-label">{CONSTANTS.LOGO_URL}</label>
                         <input type="text"
                             className="form-control"
                             placeholder="https://ejemplo.jpg"
@@ -66,7 +67,7 @@ export default class Register extends Component {
                         />
                     </div>
                     <div className="mb-3">
-                        <label className="form-label">Nombre Empresa</label>
+                        <label className="form-label">{CONSTANTS.NAME_COMPANY}</label>
                         <input
                             className="form-control"
                             type="text"
@@ -76,7 +77,7 @@ export default class Register extends Component {
                         />
                     </div>
                     <div className="mb-3">
-                        <label className="form-label">Descripcion</label>
+                        <label className="form-label">{CONSTANTS.DESCRIPTION}</label>
                         <textarea type="text"
                             className="form-control"
                             placeholder="Ingresa una descripcion"
@@ -86,7 +87,7 @@ export default class Register extends Component {
                         />
                     </div>
                     <div className="mb-3">
-                        <label className="form-label">URL del sitio web de la empresa</label>
+                        <label className="form-label">{CONSTANTS.COMPANY_URL}</label>
                         <input
                             className="form-control"
                             placeholder="https://ejemplo.com"
@@ -95,7 +96,7 @@ export default class Register extends Component {
                             onChange={this.handleInputChange}
                         />
                     </div>
-                    <button type="submit" className="btn btn-primary" to="/">Guardar</button>
+                    <button type="submit" className="btn btn-primary" to="/">{CONSTANTS.SAVE}</button>
                 </form>
             </div>
 

@@ -1,17 +1,18 @@
 import React from 'react'
+import { CONSTANTS } from '../components/Constants'
 import '../index.css'
 
 export default function NotFound() {
     return (
         <div className="py-5 text-center container">
-            <h1>404 Error Page</h1>
+            <h1>{CONSTANTS.ERROR_PAGE}</h1>
             <section class="error-container">
-                <span><span>4</span></span>
-                <span>0</span>
-                <span><span>4</span></span>
+                <span><span>{CONSTANTS.FOUR_NUMBER}</span></span>
+                <span>{CONSTANTS.CERO_NUMBER}</span>
+                <span><span>{CONSTANTS.FOUR_NUMBER}</span></span>
             </section>
             <div className="link-container">
-                <a target="_blank" href="https://www.silocreativo.com/en/creative-examples-404-error-css/" class="more-link">Visit the original article</a>
+                <a target="_blank" rel="noreferrer" href="https://www.silocreativo.com/en/creative-examples-404-error-css/" className="more-link">Visit the original article</a>
             </div>
         </div>
     )

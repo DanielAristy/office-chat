@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { CONSTANTS } from "../components/Constants";
 import { auth } from "../service/firebase";
 import { db } from "../service/firebase";
 
@@ -28,7 +29,7 @@ export default class extends Component {
         this.setState({ readError: null, loadingChats: true });
         const chatArea = this.myRef.current;
         try {
-            db.ref("chats").on("value", snapshot => {
+            db.ref(CONSTANTS.CHATS).on("value", snapshot => {
                 let chats = [];
                 snapshot.forEach((snap) => {
                     chats.push(snap.val());
@@ -71,16 +72,16 @@ export default class extends Component {
     render() {
         return (
             <div className="py-5 text-center container">
-                <h4>Chat oficina Marinilla</h4>
+                <h4>{CONSTANTS.MARINILLA_OFFICE_CHAT}</h4>
                 <div className="chat-area" ref={this.myRef}>
                     {/* Indicardor de carga */}
                     {this.state.loadingChats ? <div className="spinner-border text-success" role="status">
-                        <span className="sr-only">Loading...</span>
+                        <span className="sr-only">{CONSTANTS.LOADING}</span>
                     </div> : ""}
                     {/* Area del chat */}
                     {this.state.chats.map(chat => {
                         return <p key={chat.timestamp} className={"chat-bubble " + (this.state.user.uid === chat.uid ? "current-user" : "")}>
-                            <img src={chat.photo} className="photo" />
+                            <img src={chat.photo} className="photo" alt="" />
                             {chat.content}
                             <br />
                             <span className="chat-time float-right">{this.formatTime(chat.timestamp)}</span>

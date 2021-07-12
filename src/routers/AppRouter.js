@@ -11,6 +11,7 @@ import NotFound from '../pages/NotFound'
 import SignUp from '../pages/Signup'
 import Chat from '../pages/Chat'
 import Register from '../pages/Register'
+import { CONSTANTS } from '../components/Constants'
 
 export default class AppRouter extends Component {
   constructor() {
@@ -39,15 +40,15 @@ export default class AppRouter extends Component {
   render() {
     return (this.state.loading === true ? (
       <div className="spinner-border text-dark" role="status">
-        <span className="sr-only">Loading...</span>
+        <span className="sr-only">{CONSTANTS.LOADING}</span>
       </div>
     ) : (
       <Router>
         <Header />
         <Switch>
-          <PublicRoute path="/contact" 
-          component={Contact}
-          authenticated={this.state.authenticated}
+          <PublicRoute path="/contact"
+            component={Contact}
+            authenticated={this.state.authenticated}
           />
           <PublicRoute
             path="/login"
